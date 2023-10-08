@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+  </head>
+  <body>
+    <script>
+      // Function untuk menghitung faktorial
+      function hitungFaktorial(n) {
+        if (n === 0 || n === 1) {
+          return 1;
+        } else {
+          let hasil = 1;
+          for (let i = 2; i <= n; i++) {
+            hasil *= i;
+          }
+          return hasil;
+        }
+      }
+
+      // Function untuk menentukan grade berdasarkan nilai
+      function tentukanGrade(nilai) {
+        if (nilai >= 90) {
+          return 'A';
+        } else if (nilai >= 80) {
+          return 'B';
+        } else if (nilai >= 70) {
+          return 'C';
+        } else {
+          return 'D';
+        }
+      }
+
+      // Function untuk menampilkan pesan berdasarkan hari
+      function tampilkanAktivitas(hari) {
+        switch (hari) {
+          case 'Senin':
+            return 'Meeting tim kerja';
+          case 'Selasa':
+            return 'Mengikuti pelatihan';
+          case 'Rabu':
+            return 'Mengerjakan proyek';
+          default:
+            return 'Libur';
+        }
+      }
+
+      // Function untuk melakukan perulangan while
+      function perulanganWhile(n) {
+        let angka = 1;
+        while (angka <= n) {
+          console.log(`Angka ke-${angka}`);
+          angka++;
+        }
+      }
+
+      // Function untuk melakukan perulangan do while
+      function perulanganDoWhile(n) {
+        let counter = 1;
+        do {
+          console.log(`Perulangan ke-${counter}`);
+          counter++;
+        } while (counter <= n);
+      }
+
+      // Contoh penggunaan function di dalam program
+      let nilai = 85;
+      console.log(`Nilai Anda: ${nilai}, Grade: ${tentukanGrade(nilai)}`);
+      console.log(`Faktorial dari 5 adalah: ${hitungFaktorial(5)}`);
+      let hariAktivitas = 'Selasa';
+      console.log(`Hari ${hariAktivitas}: ${tampilkanAktivitas(hariAktivitas)}`);
+
+      // Contoh perulangan while
+      console.log('Perulangan While:');
+      perulanganWhile(5);
+
+      // Contoh perulangan do while
+      console.log('Perulangan Do While:');
+      perulanganDoWhile(5);
+    </script>
+  </body>
+</html>
